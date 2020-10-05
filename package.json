@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "api": "node ratingsAPI.js"
-  },
+    "api": "node ratingsAPI.js",
+    "format": "prettier \"src/**/*.{js,html}\" --write" 
+    },
   "dependencies": {
     "axios": "0.16.1",
     "babel-plugin-dynamic-import-webpack": "1.0.1",
