@@ -1,26 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const MyTitle = function (props) {
+const App = () => {
   return (
-    <div>
-      <h1 style={{ color: props.color }}>{props.title}</h1>
+    <div className="app">
+      <div className="landing">
+        <h1>svideo</h1>
+        <input type="text" placeholder="Search..." />
+        <a href="#">or Browser All</a>
+      </div>
     </div>
   );
 };
-
-const MyFirstComponent = function () {
-  return (
-    <div id="my-first-component">
-      <MyTitle title="Game of Thrones" color="YellowGreen" />
-      <MyTitle title="Stranger things" color="GreenYellow" />
-      <MyTitle title="House of Cards" color="Peru" />
-      <MyTitle title="Rick and Morty" color="burlywood" />
-    </div>
-  );
-};
-
-ReactDOM.render(
-  React.createElement(MyFirstComponent),
-  document.getElementById("app")
-);
+ReactDOM.render(<App />, document.getElementById("app"));
