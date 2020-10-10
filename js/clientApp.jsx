@@ -1,37 +1,26 @@
 import React from "react";
-import { render } from "react-dom";
-
-const ce = React.createElement;
+import ReactDOM from "react-dom";
 
 const MyTitle = function (props) {
-  return ce(
-    "div",
-    null,
-    ce("h1", { style: { color: props.color } }, props.title)
+  return (
+    <div>
+      <h1 style={{ color: props.color }}>{props.title}</h1>
+    </div>
   );
 };
 
 const MyFirstComponent = function () {
-  return ce(
-    "div",
-    null,
-    ce(MyTitle, {
-      title: "Game of thrones",
-      color: "YellowGreen",
-    }),
-    ce(MyTitle, {
-      title: "Stranger things",
-      color: "GreenYellow",
-    }),
-    ce(MyTitle, {
-      title: "Rick & Morty",
-      color: "LimeGreen",
-    }),
-    ce(MyTitle, {
-      title: "Silicon valley",
-      color: "Lime",
-    })
+  return (
+    <div id="my-first-component">
+      <MyTitle title="Game of Thrones" color="YellowGreen" />
+      <MyTitle title="Stranger things" color="GreenYellow" />
+      <MyTitle title="House of Cards" color="Peru" />
+      <MyTitle title="Rick and Morty" color="burlywood" />
+    </div>
   );
 };
 
-render(ce(MyFirstComponent), document.getElementById("app"));
+ReactDOM.render(
+  React.createElement(MyFirstComponent),
+  document.getElementById("app")
+);
