@@ -428,7 +428,7 @@ th {
 */
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;;
 }
 
 html {
@@ -454,19 +454,18 @@ html {
 }
 
 .landing {
-  background-color: rgba(220, 220, 220, 0.7);
+  background-color: rgba(220, 220, 220, .7);
   padding: 15px 30px;
   border-radius: 5px;
 }
 
 .landing > h1 {
-  color: #b10dc9;
+  color: #B10DC9;
   font-family: Skia;
   font-weight: normal;
 }
 
-.landing > input,
-.landing > form > input {
+.landing > input, .landing > form > input {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
@@ -488,8 +487,7 @@ html {
   border-radius: 4px;
 }
 
-.landing > a:hover,
-.landing > a:focus {
+.landing > a:hover, .landing > a:focus {
   background-color: #666;
 }
 
@@ -499,15 +497,14 @@ html {
   border-color: #333;
 }
 
-.details,
-.search {
+.details, .search {
   position: absolute;
   top: 15px;
   left: 15px;
   right: 15px;
   bottom: 15px;
   overflow-y: scroll;
-  background-color: rgba(220, 220, 220, 0.8);
+  background-color: rgba(220, 220, 220, .8);
   padding: 15px 30px;
   border-radius: 5px;
   min-width: 1400px;
@@ -524,73 +521,72 @@ pre {
   text-align: left;
 }
 
-.search > div > a {
-  width: 30%;
-  height: 0;
-  padding-bottom: 19.8%;
-  overflow: hidden;
-  margin-bottom: 3%;
-  border: 2px solid #333;
-  border-radius: 4px;
-  color: #333;
-  text-decoration: none;
-}
+// .search > div > a {
+//   width: 30%;
+//   height: 0;
+//   padding-bottom: 19.8%;
+//   overflow: hidden;
+//   margin-bottom: 3%;
+//   border: 2px solid #333;
+//   border-radius: 4px;
+//   color: #333;
+//   text-decoration: none;
+// }
 
-.search > div > a {
-  width: 100%;
-  padding-bottom: 70%;
-  height: 0;
-  overflow: inherit;
-  margin-bottom: inherit;
-  border: none;
-  border-radius: inherit;
-}
+// .search > div > a {
+//   width: 100%;
+//   padding-bottom: 70%;
+//   height: 0;
+//   overflow: inherit;
+//   margin-bottom: inherit;;
+//   border: none;
+//   border-radius: inherit;
+// }
 
-.show-card {
-  float: left;
-  margin-right: 2%;
-  border: 2px solid #333;
-  border-radius: 4px;
-  text-align: left;
-  width: 32%;
-  height: 0;
-  padding-bottom: 19.8%;
-  overflow: hidden;
-  margin-bottom: 2%;
-}
+// .show-card {
+//   float: left;
+//   margin-right: 2%;
+//   border: 2px solid #333;
+//   border-radius: 4px;
+//   text-align: left;
+//   width: 32%;
+//   height: 0;
+//   padding-bottom: 19.8%;
+//   overflow: hidden;
+//   margin-bottom: 2%;
+// }
 
-.show-card:nth-child(3n),
-.search > div > a:nth-child(3n) > .show-card {
-  margin-right: 0;
-}
+// .show-card:nth-child(3n), .search > div > a:nth-child(3n) > .show-card {
+//   margin-right: 0;
+// }
 
-.show-card > img {
-  width: 46%;
-  float: left;
-}
+// .show-card > img {
+//   width: 46%;
+//   float: left;
+// }
 
-.show-card > div {
-  display: block;
-  float: right;
-  width: 52%;
-  overflow-y: scroll;
-}
+// .show-card > div{
+//   display: block;
+//   float: right;
+//   width: 52%;
+//   overflow-y: scroll;
+// }
 
-.show-card > div > h3 {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
+// .show-card > div > h3 {
+//   margin-top: 0;
+//   margin-bottom: 5px;
+// }
 
-.show-card > div > h4 {
-  margin-top: 0;
-  margin-bottom: 5px;
-  color: #666;
-  font-size: 13px;
-}
+// .show-card > div > h4 {
+//   margin-top: 0;
+//   margin-bottom: 5px;
+//   color: #666;
+//   font-size: 13px;
+// }
 
-.show-card > div > p {
-  margin: 0;
-  font-size: 13px;
+// .show-card > div > p {
+//   margin: 0;
+//   font-size: 13px;
 }
 
 .search > header + div {
@@ -615,12 +611,12 @@ header {
 header > h1 {
   font-family: Skia;
   font-weight: normal;
-  color: #b10dc9;
+  color: #B10DC9;
   margin: 0;
 }
 
 header > h1 > a {
-  color: #b10dc9;
+  color: #B10DC9;
   text-decoration: none;
 }
 
@@ -658,8 +654,7 @@ header > input {
   border-radius: 4px;
 }
 
-.details > section > img,
-.details > section > h3 {
+.details > section > img, .details > section > h3 {
   width: 8%;
 }
 
@@ -670,28 +665,16 @@ header > input {
 }
 
 @-moz-keyframes spin {
-  from {
-    -moz-transform: rotate(0deg);
-  }
-  to {
-    -moz-transform: rotate(360deg);
-  }
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
 }
 @-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
 }
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
 }
 
 .details > section > * {
