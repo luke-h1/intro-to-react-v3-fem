@@ -11,13 +11,13 @@ class Search extends Component {
     this.setState({ searchTerm: event.target.value });
     this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
     // HAPPENS ONCE IN CONSTRUCTOR & WORKS FOREVER AFTER...
-    // GUARANTEES IT WILL BE IN THE CORRECT CONTEXT
+    // GUARANTEES THAT 'THIS' WILL BE IN THE CORRECT CONTEXT EACH & EVERY TIME
   };
   render() {
     return (
       <div className="search">
         <header>
-          <h1>Svideo</h1>
+          <h1>{this.state.searchTerm}</h1>
           <input
             type="text"
             placeholder="search..."
@@ -26,9 +26,16 @@ class Search extends Component {
           />
         </header>
         <div>
-          {preload.shows.map((show) => (
-            <ShowCard key={show.imdbID} {...show} />
-          ))}
+          {preload.shows
+            .filter(
+              (show) =>
+                `${show.title} ${show.description}`
+                  .toUpperCase()
+                  .indexOf(this.state.searchTerm.toUpperCase()) >= 0
+            )
+            .map((show) => (
+              <ShowCard key={show.imdbID} {...show} />
+            ))}
         </div>
       </div>
     );
