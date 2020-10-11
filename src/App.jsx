@@ -12,8 +12,9 @@ const App = () => (
     <div className="app">
       <Switch>
         <Route exact path="/" component={Landing} />
+        <Route exact path="/search" component={Search} />
         <Route default component={FourOhFour} />
-        <Route path="/search" component={Search} />
+
       </Switch>
     </div>
   </BrowserRouter>
