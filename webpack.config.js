@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: path.join(__dirname, 'src/App.jsx'),
+  entry: './js/ClientApp.jsx',
   devtool: 'cheap-eval-source-map',
   output: {
     path: path.join(__dirname, 'public'),
@@ -10,10 +10,10 @@ module.exports = {
   },
   devServer: {
     publicPath: '/public/',
-    historyApiFallback: true 
+    historyApiFallback: true
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.json']
   },
   stats: {
     colors: true,
