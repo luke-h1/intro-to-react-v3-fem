@@ -1,48 +1,37 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   context: __dirname,
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    './src/js/App.jsx',
-  ],
+  entry: path.join(__dirname, 'src/App.jsx'),
   devtool: 'cheap-eval-source-map',
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   devServer: {
-    hot: true,
     publicPath: '/public/',
-    historyApiFallback: true,
+    historyApiFallback: true 
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
   stats: {
     colors: true,
     reasons: true,
-    chunks: true,
+    chunks: true
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-  ],
   module: {
     rules: [
       {
         enforce: 'pre',
         test: /\.jsx?$/,
         loader: 'eslint-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
-      },
-    ],
-  },
+        loader: 'babel-loader'
+      }
+    ]
+  }
 };

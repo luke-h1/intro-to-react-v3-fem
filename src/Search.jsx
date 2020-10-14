@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react';
 import ShowCard from './showCard';
-import preload from '../../data.json';
+import preload from '../data.json';
 
 class Search extends Component {
   state = {
