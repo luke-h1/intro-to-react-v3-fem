@@ -1,11 +1,9 @@
 /* eslint-disable */
 import React from 'react';
-import { render } from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
-import Search from './Search';
+import Search from '../Search';
 const FourOhFour = () => <h1>404</h1>;
-
 const App = () => (
   <BrowserRouter>
     <div className="app">
@@ -13,10 +11,8 @@ const App = () => (
         <Route exact path="/" component={Landing} />
         <Route exact path="/search" component={Search} />
         <Route default component={FourOhFour} />
-
       </Switch>
     </div>
   </BrowserRouter>
 );
-
-render(React.createElement(App), document.getElementById('app'));
+export default App;
