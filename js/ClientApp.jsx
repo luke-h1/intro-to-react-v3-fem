@@ -1,21 +1,29 @@
+/* eslint-disable */
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Landing from './Landing';
-import Search from './Search';
+import App from './App'; 
 
-const FourOhFour = () => <h1>404</h1>;
 
-const App = () => (
-  <BrowserRouter>
-    <div className="app">
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route path="/search" component={Search} />
-        <Route component={FourOhFour} />
-      </Switch>
-    </div>
-  </BrowserRouter>
-);
 
-render(<App />, document.getElementById('app'));
+const renderApp = () => { 
+  render(<App />, document.getElementById('app'))
+}
+renderApp();
+
+
+const i = (function (){
+  if(module.hot){
+    module.hot.accept('./App', () => { 
+      renderApp();
+    })
+  }
+})()
+
+
+
+// if(module.hot) {
+//   module.hot.accept('./App', () => {
+//     const NextApp = require('./App').default;
+//     render(NextApp)
+//   })
+// }
