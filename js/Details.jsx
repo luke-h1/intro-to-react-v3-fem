@@ -1,9 +1,15 @@
 // @flow
-
+/* eslint-disable */
 import React from 'react';
-const Details = () => (  
+const Details = (props) => (  
   <div className='details'>
-    <h1>hello</h1>
+      
   </div>
 ) 
 export default Details;
+
+
+
+
+{/* <pre><code>{JSON.stringify(props, null, 4)}</code></pre> */}
+    
